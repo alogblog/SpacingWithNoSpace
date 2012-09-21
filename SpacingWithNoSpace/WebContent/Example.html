@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>SpacingWithNoSpace
+		</title>
+		<script type="text/javascript" src="SpacingWithNoSpace.js"></script>
+		<style>
+		span { color: #ccc; }
+		span.expo {
+		    color: #0f0;
+		}
+		</style>
+	</head>
+<body>
+<button onclick="spacing.recurse(document.getElementById('bolder'));">Bolder</button>
+<div id="bolder">
+	<h2>Hello World, this is my test HTML</h2>
+    <div>
+         팝 전문 라디오 방송 '배철수의 음악캠프'에 한국 가수 싸이의 '강남 스타일'이 울려퍼졌다.
+DJ 배철수는 20일 방송된 MBC FM4U '배철수의 음악캠프' 오프닝에서 "오늘 첫 곡은 싸이의 '강남스타일'입니다"라며 '강남스타일'을 파격 선곡했다.
+지극히 상업적인 대중가요가 국내 굴지의 팝 음악 전문방송에서 오프닝곡으로 선곡된 것은 지극히 이례적인 일이다. 실제 '음악캠프'는 한국 가수들이 게스트로 초대된다든지 특별한 경우를 제외하고는 한국 가요를 틀지 않는다.
+하지만 19일 싸이가 미국 빌보드 메인 싱글 핫100 차트에서 지난주 64위에서 무려 53계단이나 뛰어오른 11위를 기록하는 기염을 토하면서 이같은 믿기지 않은 상황이 가능하게 됐다. <span class="expo">실제 '음악캠프' 청취자들은 싸이의 빌보드 톱10 입성을 목전에 둔 소식을 전해 들은 후 '음악캠프'에서 그의 노래를 들을 수 있기를 학수고대했다.</span>
+청취자들은 "진짜로 틀었다, 들렸다", "우와 이런 날이 오다니 감격이다", "싸이 빌보드 11위의 위엄 자랑스럽다", "'배캠'의 센스있는 선곡 감동입니다", "대박 선곡이네요", "이제 당당히 월드스타 대접받는 싸이", "'강남스타일' 세계적인 팝음악"라는 등의 뜨거운 반응을 보였다.
+현재 싸이는 빌보드차트 뿐만 아니라 미국 아이튠즈 싱글 차트에서 지난 15일 이후 줄곧 1위를 달리고 있으며 동영상 공유 사이트 유튜브 뮤직비디오 조회수는 2억 3000만을 임박, 꿈의 30위권 진입을 앞두고 있다. 오는 11월 독일에서 열릴 2012 MTV 유럽 뮤직비디오 어워드(EMA)에서는 리한나, 레이디가가 등과 함께 베스트 뮤직비디오 부문 후보에도 오르는 등 글로벌한 행보를 이어가고 있다.
+    </div>
+    <p>프로선수는 <span>몸이</span> 돈이다.    aaa@gmail.com   넥센 히어로즈 에이스 외국인 투수 브랜든 나이트가 입증했다.   무릎이 바꾼 야구인생 역전 드라마다.</p>
+      <p>나이트는 지난 19일 <span>잠실 LG전 승리를</span> 거두면서 올 시즌 최초로 15승(3패) 투수가 됐다. 장원삼과 미치 탈보트(이상 삼성, 14승)를 제치고 다승 부문 단독</p>
+      <p> 선두로 뛰어올랐다.  aaa@gmail.com 평균자책점도 2.27을 유지해 이 부문 선두를 지키고 있다.
+      aaa@gmail.com 나이트는 지난해 넥센과 재계약 당시만 해도 의문부호가 달린 투수였다.
+      한국무대에서 세 시즌을 활약했지만, 뚜렷한 성적을 내진 못했다.
+      지난 시즌 넥센에서 뛰며 7승15패 평균자책점 4.70으로 부진했다. 2009~10년 삼성에서 </p>
+      <pre>
+김혁민은 21일 대전구장에서 열린 2012
+팔도 프로야구 넥센 히어로즈와의 경기 2회 초
+공 9개로 3개의 삼진을 잡아냈다.
+넥센은 이성열, 조중근, 문우람의
+세 타자가 연속으로 삼구 삼진으로 나란히 물러났다.
+      </pre>
+      <p>거둔     두    시즌 성적도 aaa@gmail.com 12승7패로 초라 했다. 단 한 번도 두 자릿수 승수를 기록하지 못한 평범한 투 수였다.  </p>
+</div>
+
+<script type="text/javascript">
+
+	var decorator1 = function(str)
+	{
+	    var e = document.createElement("span");
+	    e.style.color = "#ff0000";
+	    e.appendChild(document.createTextNode(str));
+	    return e;
+	};
+	var decorator2 = function(str)
+	{
+	    var e = document.createElement("span");
+	    e.style.color = "#0000ff";
+	    e.appendChild(document.createTextNode(str));
+	    return e;
+	};
+	var filter = function(node)
+	{
+		if((node.nodeName == 'PRE') || (/H[1-6]/.test(node.nodeName)))
+		{
+			return false;
+		}
+		if((node.nodeName == 'SPAN') && (node.getAttribute('class') == 'expo'))
+		{
+			return false;
+		}
+
+		return true;
+	};
+	var spacer = function()
+	{
+		// 만약 spaceString이 &nbsp;로 하고 싶다면, "\u00a0"을 사용해야함
+		var spaceString = "\u00a0\u00a0\u00a0";
+		if(spaceString)
+		{
+			// <span class="examleSpacer">spaceString</span>
+			var e = document.createElement("span");
+			e.class = "exmpleSpacer";
+		    e.appendChild(document.createTextNode(spaceString));
+			return e;
+		}
+		else
+		{
+			// No Space --> Just Simple Text Node
+			return spaceString;
+		}
+	};
+
+	//var spacing = new SpacingWithNoSpace(decorator1, decorator2, filter, spacer);
+	var spacing = new SpacingWithNoSpace();
+	//spacing.recurse(document.getElementById("bolder"));
+</script>
+		</body>
+</html>
